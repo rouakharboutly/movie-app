@@ -1,0 +1,26 @@
+.add-page .container {
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+.input-container input {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.add-content .input-container input:focus {
+  border-color: #801d1d;
+    box-shadow: 0 0 8px rgba(78, 78, 240, 0.2); 
+}
+
+
+

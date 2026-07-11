@@ -1,0 +1,46 @@
+/* الحاوية التي تجمع الأزرار وتضعها في منتصف الكرت تماماً */
+.inner-card-controls {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important; /* لتتوسط الصورة بالملي */
+  display: flex !important;
+  gap: 15px !important;
+  opacity: 0 !important; /* تكون مخفية وتظهر فقط عند تمرير الماوس */
+  transition: all 0.3s ease !important;
+  z-index: 5 !important;
+}
+
+/* عندما نقوم بتمرير الماوس فوق الكرت الأب (movie-card)، تظهر الأزرار فوراً */
+.movie-card:hover .inner-card-controls {
+  opacity: 1 !important;
+}
+
+/* تنسيق الأزرار الدائرية الفخمة باللون العنابي الخاص بكِ */
+.inner-card-controls .ctrl-btn {
+  background-color: #801d1d !important; /* لونكِ العنابي المميز */
+  color: #ffffff !important;
+  border: none !important;
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  font-size: 18px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* حركة تكبير خفيفة وتوهج عند تمرير الماوس فوق أيقونة محددة */
+.inner-card-controls .ctrl-btn:hover {
+  background-color: #a32929 !important;
+  transform: scale(1.1) !important; /* يكبر الزر قليلاً عند لمسه */
+}
+
+/* التأكد من أن الأيقونة بداخل الزر ظاهرة وبلون أبيض دائماً */
+.inner-card-controls .ctrl-btn i {
+  color: #ffffff !important;
+  display: inline-block !important;
+}

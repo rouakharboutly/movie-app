@@ -1,0 +1,41 @@
+.header{
+  /* background-color:rgb(99, 6, 6); */
+  background: linear-gradient( 135deg, rgb(155, 37, 37), rgb(108, 8, 8));
+  
+}
+.container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+    color:white;
+    height:auto;
+
+}
+ .container ul{
+    display:flex;
+    list-style:none;
+
+ }
+ .add{
+    margin-right:10px;
+    width:50px;
+    height:30px;
+    background-color:rgb(75, 5, 5);
+    border-radius:5px;
+text-align: center;
+  
+ }
+.container ul li a{
+    margin:0 10px;
+  text-decoration:none;
+      color:white;
+}
+
+.Logo a{
+    font-size:30px;
+    font-weight:bold;
+    color:white;
+      text-decoration:none;
+
+}

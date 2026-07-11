@@ -1,0 +1,65 @@
+
+.result-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.result-card .poster {
+  width: 75px;
+  height: 100px;
+  overflow: hidden;
+  margin-right: 15px;
+  display: block;
+}
+
+.result-card .poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result-card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-card .title {
+  font-size: 1.25rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.result-card .year {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--primary);
+  margin: 0;
+}
+
+
+.result-card .controls button {
+  background-color: red;
+  color: var(--primary);
+  padding: 10px 15px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.result-card .controls button:hover {
+  opacity: 0.8;
+}
+
+
+.result-card .controls button:disabled {
+  background-color: #cccccc !important;
+  color: #777777 !important;
+  cursor: not-allowed !important;
+  opacity: 0.5;
+}

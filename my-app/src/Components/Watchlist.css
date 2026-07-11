@@ -1,0 +1,78 @@
+/* الحاوية الكبيرة للصفحة بالكامل لترك مسافة مريحة من الأعلى والأسفل */
+.movie-page {
+  padding: 40px 0;
+  min-height: 80vh;
+}
+
+/* 1. تنسيق شريط العنوان (العنوان في اليسار والعداد في اليمين) */
+.movie-page .header-bar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-bottom: 2px solid #2a2a30 !important;
+  padding-bottom: 20px !important;
+  margin-bottom: 40px !important;
+}
+
+/* اسم الصفحة (My Watchlist) باللون الأبيض العريض */
+.movie-page .main-title {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+/* الكبسولة العنابية الفخمة للعداد (الرقم) بجانب العنوان */
+.movie-page .count-pill {
+  background-color: #801d1d !important; /* لونكِ العنابي الرائع */
+  color: #ffffff !important;
+  padding: 6px 18px !important;
+  border-radius: 50px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 10px rgba(128, 29, 29, 0.3) !important;
+}
+
+/* 2. الشبكة السحرية (Grid) التي ستجبر البوسترات الضخمة على الانكماش والترتيب */
+.movie-grid {
+  display: grid !important;
+  /* كل فيلم سيأخذ عرض 220px كحد أدنى، وإذا امتلأ السطر ينزل الفيلم التالي لسطر جديد فوراً */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+  gap: 30px !important; /* مسافات مريحة جداً بين كروت الأفلام من كل الجهات */
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* 3. تنسيق بطاقة الفيلم الفردية (كود مكمل ومؤكد لـ ResultCard) */
+.movie-grid .result-card {
+  background-color: #1a1a1e !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  border: 1px solid #2a2a30 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  transition: transform 0.2s ease !important;
+}
+
+.movie-grid .result-card:hover {
+  transform: translateY(-5px) !important;
+}
+
+/* إجبار الصورة على أبعاد سينمائية ممتازة دون تمدد عشوائي */
+.movie-grid .result-card .poster img {
+  width: 100% !important;
+  height: 320px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* 4. رسالة "القائمة فارغة" في حال لم يكن هناك أفلام */
+.no-movies {
+  font-size: 22px !important;
+  color: #55555f !important;
+  text-align: center !important;
+  margin-top: 80px !important;
+  font-weight: 600 !important;
+}
